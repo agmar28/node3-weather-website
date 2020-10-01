@@ -52,14 +52,15 @@ app.get('/weather', (req, res) => {
         if(error) {
             return res.send({error});
         }
-        forecast(latitude, longitude, (error, {Forecast}) => {
+        forecast(latitude, longitude, (error, {Forecast, Temperature}) => {
                 if(error) {
                     return res.send({error})
                 }
                 res.send({
                     forecast: Forecast,
                     location: location,
-                    address: req.query.address
+                    address: req.query.address,
+                    temperature: Temperature
                 })
             });
     });
