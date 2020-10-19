@@ -4,8 +4,8 @@ const messageOne = document.querySelector('#message-1');
 const messageTwo = document.querySelector('#message-2');
 const messageThree = document.querySelector('#message-3')
 
-// messageOne.textContent = 'Location: ';
 
+// messageOne.textContent = 'Location: ';
 weatherForm.addEventListener('submit', (e) => {
    e.preventDefault();
    const location = search.value
